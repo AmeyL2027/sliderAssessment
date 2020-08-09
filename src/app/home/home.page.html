@@ -1,0 +1,42 @@
+<style>
+
+.swiper-pagination-bullet-active { 
+    background: #ed3c64 !important;}
+</style>
+
+<ion-content style="background: #060a1c !important;">
+  <div class="logo">
+   
+  </div>
+
+
+  <ion-slides class="slide-padding" pager="true">
+      <ion-slide *ngFor="let story of topStories;let in=index">
+          <div class="container">
+              <ion-img *ngIf="in!=2" class="test-img" style="width: 280px; padding-left: 100px; padding-top: 0px; padding-bottom:100px" src="{{story.picture}}"></ion-img>
+              <ion-img *ngIf="in==2"  class="test-img" style="width: 280px; padding-left: 100px; padding-top: 0px; padding-bottom:40px" src="{{story.picture}}"></ion-img>
+
+              <br><br>
+              <br><br>    <br><br> 
+              <h2 class="slidetitle">
+                  <span  style="text-align:center" class="block">{{story.title}}</span>
+              </h2>
+              
+              <p class="author" style="bottom:155px; padding:0px 55px; left:0px; font-size:14px;"> {{story.body}}</p>
+              <IonButton *ngIf="in==2" style="color: #ed3c64; background-color: #060a1c;bottom: 120px;position: absolute;padding: 0px;width: 100%;text-align: center;left: 0;color: #fff;margin-left: 0 auto;" tabindex="0"  [routerLink]="['/mainscreen']"><span style="background: #ed3c64;padding: 8px 40px;border-radius: 5px;font-size: 12px;font-weight: bold;">Finish ?</span>
+              </IonButton>
+          </div>
+      </ion-slide>
+  </ion-slides>
+  <div class="container" style="background: #060a1c;
+  margin-top: -16px;
+  padding: 0px;">
+  <div class="sub-headers">
+      <p style="color: #ed3c64; height:100px; padding-top:10px;" [routerLink]="['/mainscreen']" >Skip Tour</p>
+  </div>
+
+  <div class="sub-headers" style="height:45px; font-size:14px;">
+    <span style="color: white; font-weight:normal" (click)="test()">Already a user?</span>  <span style="color:#ed3c64;">  Login ?</span>
+</div>
+</div>
+</ion-content>

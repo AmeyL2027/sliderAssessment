@@ -1,0 +1,41 @@
+ 
+  
+  <ion-content style="background: #f8f8f8; !important">
+
+    <ion-img src="{{logo}}" style="background: #f8f8f8;padding: 12px 90px;border-radius: 5px;font-size: 12px;font-weight: bold;"></ion-img>
+    <ion-icon name='close-circle' [routerLink]="['/home']"style='float: right;
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+    background: #a58f8f;
+    margin-top: -50px;'></ion-icon>  
+
+    <div class="container" style="height: 77vh;">
+    <ion-img src="{{bodyimg}}" style="background: #f8f8f8; padding: 70px 100px 10px 100px;"  ></ion-img>
+    <h2 class="slidetitle" style="width:100%; text-align:center; margin-top:-20px; color:#000">
+        <span  style="text-align:center" class="block">{{title}}</span>
+    </h2>
+    <p class="author" style="
+    padding: 0px 50px;
+    text-align: center;
+    color: #777;
+font-size:14px;">{{body}}</p>
+    <IonButton style="color: #ed3c64; background-color: #f8f8f8;bottom: 140px;position: absolute;padding: 0px;width: 100%;text-align: center;left: 0;color: #fff;margin-left: 0 auto;" (click)="showModal()" ><span style="background: #ed3c64;padding: 8px 30px;border-radius: 5px;font-size: 12px;font-weight: bold;">Open Reader</span></IonButton>
+    </div>
+  
+    <div class="sub-headers" style="text-align: center; color:#000; font-size: 14px;">
+      <span ><b>Already a user?</b></span>  <span style="color:#ed3c64;">  Login</span>
+  </div>
+  <div class="sub-headers">
+    <p style="
+    color: #ed3c64;
+    text-align: center;
+    background-color: #fff;
+    border: solid 2px #fff;
+    height: 100px;
+    border-radius: 30px;
+    padding-top: 20px; font-size:14px"  (click)="showIframeModal()">About Smart Access</p>
+
+</div>
+  
+  </ion-content>
